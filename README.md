@@ -160,7 +160,7 @@ npm run build    # production build into dist/
 | `tests/fixtures/` | An **anonymised** TUMonline feed (invented course names, rooms, people and IDs) |
 
 Pushing to `main` runs the tests and deploys the web tool to GitHub Pages
-(`.github/workflows/deploy.yml`). In the repository settings, set *Pages → Source* to *GitHub Actions*.
+(`.github/workflows/deploy.yml`). The deploy step is skipped while the repository is private; after making it public, set *Pages → Source* to *GitHub Actions* in the repository settings.
 
 Never commit real `.ics` files, iCal links or exported settings; `.gitignore` excludes them.
 

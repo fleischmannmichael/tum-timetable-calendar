@@ -27,13 +27,14 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      # Pages needs a public repository on the free plan: skip upload/deploy while private.
       - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && !github.event.repository.private
         with:
           path: dist
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && !github.event.repository.private
     needs: build
     runs-on: ubuntu-latest
     environment:
