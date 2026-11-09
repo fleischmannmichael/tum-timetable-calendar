@@ -1,0 +1,28 @@
+{
+  "name": "tum-timetable-to-google-calendar",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Turn a TUMonline timetable into a clean, colour-coded Google Calendar",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:gas": "vite build --config vite.gas.config.ts",
+    "dev": "npm run build:gas && vite",
+    "build": "npm run build:gas && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "npm run build:gas && vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.22",
+    "@fullcalendar/daygrid": "^6.1.22",
+    "@fullcalendar/list": "^6.1.22",
+    "@fullcalendar/timegrid": "^6.1.22"
+  }
+}

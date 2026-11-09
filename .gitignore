@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-gas/
+
+# Personal data: never commit real timetables, links or exported settings
+*.ics
+!tests/fixtures/*.ics
+settings*.json
+tum-calendar-settings*.json
+.env*
+
+# The original prototype contains a real TUMonline token
+tum_timetable_final.gs
